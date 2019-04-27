@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+set -Eeu
+
+usermod --non-unique --uid "$EXPECTED_UID" www-data
+groupmod --non-unique --gid "$EXPECTED_GID" www-data
+
+export APACHE_RUN_DIR="/var/run/apache2"
+export APACHE_PID_FILE="/var/run/apache2/pid"
+export APACHE_RUN_USER="www-data"
+export APACHE_RUN_GROUP="www-data"
+export APACHE_LOG_DIR="/var/log/apache2"
+
+touch /var/log/z-push/std.log
+touch /var/log/z-push/err.log
+
+chown -R www-data:www-data /var/lib/z-push /var/log/z-push
+chmod -R 0770 /var/lib/z-push /var/log/z-push
+
+/usr/sbin/apache2 -DFOREGROUND
