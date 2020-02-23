@@ -12,6 +12,15 @@ under the MIT license.
 
 ## Usage
 
+I tried to pre-set some sensible defaults, they work for my nextcloud,
+dovecot, postfix setup. Your mileage might vary.
+
+You need to set at least some values for the appropriate servers:
+  - imap_server
+  - imap_smtp_host
+  - carddav_server
+  - caldav_server
+
 ### docker-compose.yml
 
 Here's an example **insecure** configuration. You should use this behind
@@ -21,7 +30,7 @@ a reverse proxy with SSL/TLS.
 version: '3.7'
 services:
   zpush:
-    image: gmaniac/z-push-mail
+    image: gmaniac/z-push-nc-dovecot-postfix
     ports:
     - 80:80
     volumes:
