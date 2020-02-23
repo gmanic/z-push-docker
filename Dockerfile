@@ -1,8 +1,8 @@
 FROM debian:stretch-slim
 
 # configuration
-LABEL com.ldaws.fastmailzpush.version "2.4.5-1"
-LABEL com.ldaws.fastmailzpush.version.upstream "2.4.5"
+LABEL com.ldaws.fastmailzpush.version "2.5.1-1"
+LABEL com.ldaws.fastmailzpush.version.upstream "2.5.1"
 LABEL com.ldaws.fastmailzpush.version.revision "1"
 VOLUME [ "/var/lib/z-push" ]
 ENV EXPECTED_UID=1513 EXPECTED_GID=1513 FORWARDED_FOR_HEADER='X-Forwarded-For' \
