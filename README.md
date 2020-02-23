@@ -21,7 +21,7 @@ a reverse proxy with SSL/TLS.
 version: '3.7'
 services:
   zpush:
-    image: liamdawson/z-push-fastmail
+    image: gmaniac/z-push-mail
     ports:
     - 80:80
     volumes:
@@ -33,6 +33,5 @@ services:
 
 ## TODO
 
-* [ ] Actually support ENV variables that are used in config
 * [ ] Z-Push logs visible in Docker logs
 * [ ] Prevent provisioning prompt
