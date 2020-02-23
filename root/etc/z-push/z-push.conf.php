@@ -8,9 +8,11 @@
 	define('STATE_DIR',				(string)	getenv("zpush_state_dir"));
 	define('IPC_PROVIDER',				(string)	getenv("zpush_ipc_provider"));
 	define('LOGBACKEND',				(string)	getenv("zpush_logbackend"));
-	define('LOGLEVEL',				constant(getenv("zpush_loglevel")));
+	define('LOGLEVEL',	LOGLEVEL_INFO);
+	define('LOGUSERLEVEL',	LOGLEVEL_DEVICEID);
+// ToDo - make Loglevels configurable
+// Idea, not working:	define('LOGUSERLEVEL',	constant(getenv("zpush_loguserlevel")));
 	define('LOGAUTHFAIL',				(string)	getenv("zpush_logauthfail"));
-	define('LOGUSERLEVEL',				constant(getenv("zpush_loguserlevel")));
 	$specialLogUsers = array();
 	define('LOGFILEDIR',				(string)	getenv("zpush_logfiledir"));
 	define('LOGFILE', 		LOGFILEDIR .	(string) getenv("zpush_logfile"));
@@ -18,10 +20,14 @@
 	define('PROVISIONING',				(bool)		constant(getenv("zpush_provisioning")));
 	define('LOOSE_PROVISIONING',			(bool)		constant(getenv("zpush_loose_provisioning")));
 	define('PROVISIONING_POLICYFILE',		(string)	getenv("zpush_provisioning_policyfile"));
-	define('SYNC_CONFLICT_DEFAULT',			constant(getenv("zpush_sync_conflict_default")));
-	define('SYNC_FILTERTIME_MAX',			constant(getenv("zpush_sync_filtertime_max")));
+// ToDo - as above, make constants configurable
+//	define('SYNC_CONFLICT_DEFAULT',			constant(getenv("zpush_sync_conflict_default")));
+//	define('SYNC_FILTERTIME_MAX',			constant(getenv("zpush_sync_filtertime_max")));
+	define('SYNC_CONFLICT_DEFAULT',	SYNC_CONFLICT_OVERWRITE_PIM);
+	define('SYNC_FILTERTIME_MAX',	SYNC_FILTERTYPE_ALL);
 	define('PING_INTERVAL',				(int)		getenv("zpush_ping_intervall"));
-	define('FILEAS_ORDER',				constant(getenv("zpush_fileas_order")));
+//	define('FILEAS_ORDER',				constant(getenv("zpush_fileas_order")));
+	define('FILEAS_ORDER',	SYNC_FILEAS_LASTFIRST);
 	define('SYNC_MAX_ITEMS',			(int)		getenv("zpush_sync_max_items"));
 	define('UNSET_UNDEFINED_PROPERTIES',		(bool)		constant(getenv("zpush_unset_undefined_properties")));
 	define('SYNC_CONTACTS_MAXPICTURESIZE',		(int)		getenv("zpush_sync_contacts_maxpicturesize"));
