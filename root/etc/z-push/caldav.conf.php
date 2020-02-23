@@ -30,27 +30,27 @@
 // ************************
 
 // Server protocol: http or https
-define('CALDAV_PROTOCOL', 'https');
+define('CALDAV_PROTOCOL',	(string)	getenv("caldav_protocol"));
 
 // Server name
-define('CALDAV_SERVER', 'caldav.fastmail.com');
+define('CALDAV_SERVER',		(string)	getenv("caldav_server"));
 
 // Server port
-define('CALDAV_PORT', '443');
+define('CALDAV_PORT',		(int)		getenv("caldav_port"));
 
 // Path
-define('CALDAV_PATH', '/dav/%u/');
+define('CALDAV_PATH',		(string)	getenv("caldav_path"));
 
 // Default CalDAV folder (calendar folder/principal). This will be marked as the default calendar in the mobile
-define('CALDAV_PERSONAL', 'PRINCIPAL');
+define('CALDAV_PERSONAL',	(string)	getenv("caldav_personal"));
 
 // If the CalDAV server supports the sync-collection operation
 // DAViCal, SOGo and SabreDav support it
 // SabreDav version must be at least 1.9.0, otherwise set this to false
 // Setting this to false will work with most servers, but it will be slower
-define('CALDAV_SUPPORTS_SYNC', false);
+define('CALDAV_SUPPORTS_SYNC',	(bool)		constant(getenv("caldav_supports_sync")));
 
 
 // Maximum period to sync.
 // Some servers don't support more than 10 years so you will need to change this
-define('CALDAV_MAX_SYNC_PERIOD', 2147483647);
+define('CALDAV_MAX_SYNC_PERIOD',	(int)	getenv("caldav_max_sync_period"));

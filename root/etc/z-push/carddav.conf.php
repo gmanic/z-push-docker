@@ -28,13 +28,13 @@
 // ************************
 
 // Server protocol: http or https
-define('CARDDAV_PROTOCOL', 'https');
+define('CARDDAV_PROTOCOL',		(string)	getenv("carddav_protocol"));
 
 // Server name
-define('CARDDAV_SERVER', 'carddav.fastmail.com');
+define('CARDDAV_SERVER',		(string)	getenv("carddav_server"));
 
 // Server port
-define('CARDDAV_PORT', '443');
+define('CARDDAV_PORT',			(int)		getenv("carddav_port"));
 
 // Server path to the addressbook, or the principal with the addressbooks
 //  If your user has more than 1 addressbook point it to the principal.
@@ -45,7 +45,7 @@ define('CARDDAV_PORT', '443');
 // %u: replaced with the username
 // %d: replaced with the domain
 //   Add the trailing /
-define('CARDDAV_PATH', '/dav/addressbooks/user/%u/');
+define('CARDDAV_PATH',			(string)	getenv("carddav_path"));
 
 
 // Server path to the default addressbook
@@ -53,7 +53,7 @@ define('CARDDAV_PATH', '/dav/addressbooks/user/%u/');
 // %u: replaced with the username
 // %d: replaced with the domain
 //   Add the trailing /
-define('CARDDAV_DEFAULT_PATH', '/dav/addressbooks/user/%u/Default');
+define('CARDDAV_DEFAULT_PATH',		(string)	getenv("carddav_default_path"));
 
 // Server path to the GAL addressbook. This addressbook is readonly and searchable by the user, but it will NOT be synced.
 // If you don't want GAL, comment it
@@ -68,24 +68,24 @@ define('CARDDAV_DEFAULT_PATH', '/dav/addressbooks/user/%u/Default');
 // Addressbook display name, the name showed in the mobile device
 // %u: replaced with the username
 // %d: replaced with the domain
-define('CARDDAV_CONTACTS_FOLDER_NAME', '%u Addressbook');
+define('CARDDAV_CONTACTS_FOLDER_NAME',	(string)	getenv("carddav_contacts_folder_name"));
 
 
 // If the CardDAV server supports the sync-collection operation
 // DAViCal and SabreDav support it, but Owncloud, SOGo don't
 // SabreDav version must be at least 1.9.0, otherwise set this to false
 // Setting this to false will work with most servers, but it will be slower: 1 petition for the href of vcards, and 1 petition for each vcard
-define('CARDDAV_SUPPORTS_SYNC', false);
+define('CARDDAV_SUPPORTS_SYNC', 	(bool)		constant(getenv("carddav_supports_sync")));
 
 
 // If the CardDAV server supports the FN attribute for searches
 // DAViCal supports it, but SabreDav, Owncloud and SOGo don't
 // Setting this to true will search by FN. If false will search by sn, givenName and email
 // It's safe to leave it as false
-define('CARDDAV_SUPPORTS_FN_SEARCH', false);
+define('CARDDAV_SUPPORTS_FN_SEARCH',	(bool)		constant(getenv("carddav_supports_fn_search")));
 
 
 // If your carddav server needs to use file extension to recover a vcard.
 //    Davical needs it
 //    SOGo official demo online needs it, but some SOGo installation don't need it, so test it
-define('CARDDAV_URL_VCARD_EXTENSION', '.vcf');
+define('CARDDAV_URL_VCARD_EXTENSION',	(string)	getenv("carddav_url_vcard_extension"));

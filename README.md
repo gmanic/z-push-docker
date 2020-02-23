@@ -1,4 +1,5 @@
-# Fastmail Z-Push Image
+# docker Z-Push Image
+(shamelessly forked from liamdawson - thank you :-) )
 
 Use [Z-Push](http://z-push.org/) to sync Fastmail email, contacts and
 calendars via Exchange ActiveSync (e.g. natively to an Android phone).
