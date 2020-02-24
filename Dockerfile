@@ -100,6 +100,7 @@ RUN apt-get update && apt-get install -y \
 COPY /vendor /vendor
 
 # note: failures are expected
-RUN dpkg -i /vendor/z-push-*.deb && rm -rf /vendor
+RUN mkdir /var/log/z-push && chown www-data.www-data /var/log/z-push \
+  && dpkg -i /vendor/z-push-*.deb && rm -rf /vendor
 
 COPY root /
