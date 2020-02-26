@@ -54,7 +54,7 @@ ENV EXPECTED_UID=1513 EXPECTED_GID=1513 FORWARDED_FOR_HEADER='X-Forwarded-For' \
   zpush_use_custom_remote_ip_header='HTTP_X_FORWARDED_FOR' \
   zpush_use_fullemail_for_login='true' \
   zpush_state_machine='FILE' \
-  zpush_state_dir='/var/lib/z-push' \
+  zpush_state_dir='/var/lib/z-push/' \
   zpush_ipc_provider='' \
   zpush_logbackend='filelog' \
   zpush_loglevel=LOGLEVEL_INFO \
