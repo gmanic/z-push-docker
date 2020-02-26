@@ -56,7 +56,7 @@ ENV EXPECTED_UID=1513 EXPECTED_GID=1513 FORWARDED_FOR_HEADER='X-Forwarded-For' \
   zpush_state_machine='FILE' \
   zpush_state_dir='/var/lib/z-push' \
   zpush_ipc_provider='' \
-  zpush_logbackend='' \
+  zpush_logbackend='filelog' \
   zpush_loglevel=LOGLEVEL_INFO \
   zpush_logauthfail='true' \
   zpush_loguserlevel=LOGLEVEL_DEVICEID \
