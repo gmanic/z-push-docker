@@ -8,7 +8,7 @@
 	define('STATE_DIR',				(string)	getenv("zpush_state_dir"));
 	define('IPC_PROVIDER',				(string)	getenv("zpush_ipc_provider"));
 	define('LOGBACKEND',				(string)	getenv("zpush_logbackend"));
-	define('LOGLEVEL',	LOGLEVEL_INFO);
+	define('LOGLEVEL',	LOGLEVEL_WBXMLSTACK);
 	define('LOGUSERLEVEL',	LOGLEVEL_DEVICEID);
 // ToDo - make Loglevels configurable
 // Idea, not working:	define('LOGUSERLEVEL',	constant(getenv("zpush_loguserlevel")));
