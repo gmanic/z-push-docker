@@ -16,9 +16,9 @@ touch ${zpush_logfiledir}${zpush_logfile}
 touch ${zpush_logfiledir}${zpush_logerrorfile}
 #/var/log/z-push/zpush-err.log
 
-chown -R www-data:www-data /var/lib/z-push/${zpush_logfiledir}
+chown -R www-data:www-data /var/lib/z-push/ ${zpush_logfiledir}
 #/var/log/z-push
-chmod -R 0770 /var/lib/z-push/${zpush_logfiledir}
+chmod -R 0770 /var/lib/z-push/ ${zpush_logfiledir}
 #/var/log/z-push
 
 /usr/sbin/apache2 -DFOREGROUND
