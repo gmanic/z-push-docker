@@ -104,3 +104,4 @@ RUN mkdir /var/log/z-push && chown www-data.www-data /var/log/z-push \
   && dpkg -i /vendor/z-push-*.deb && rm -rf /vendor
 
 COPY root /
+# Docker rebuild change only
