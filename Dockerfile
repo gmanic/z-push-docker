@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-# configuration
+# configuration n
 LABEL com.ldaws.fastmailzpush.version "2.5.1-1"
 LABEL com.ldaws.fastmailzpush.version.upstream "2.5.1"
 LABEL com.ldaws.fastmailzpush.version.revision "1"
